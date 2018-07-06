@@ -1,0 +1,13 @@
+import  pymysql.cursors
+conn = pymysql.connect(host="localhost",port=3306,user="root",passwd="vipqq",db="qq",charset='UTF8')
+cur = conn.cursor()
+cur.execute("insert into urls(id,url,content) values(6,'www.sina.com','xinlang')")
+cur.close()
+conn.commit()
+conn.close()
+# conn= MySQLdb.connect(host='localhost' , user='root', passwd='5407', db ='leon')
+# cur = conn.cursor()
+# cur.execute("INSERT INTO urls (url, content) VALUES ('www.baidu.com', 'This is content.')")
+# cur.close()
+# conn.commit()
+# conn.close()
